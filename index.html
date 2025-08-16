@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">🎵 Spotify Clone</div>
+    <input type="text" placeholder="Search songs...">
+  </nav>
+
+  <!-- Main Layout -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside>
+      <ul>
+        <li>🏠 Home</li>
+        <li>🔍 Search</li>
+        <li>📂 Library</li>
+      </ul>
+    </aside>
+
+    <!-- Playlist Section -->
+    <main>
+      <h2>Playlist</h2>
+      <div class="songList">
+        <div class="songItem">
+          <img src="card2img.jpeg" alt="cover">
+          <span>Song 1</span>
+          <button onclick="playSong(0)">▶</button>
+        </div>
+        <div class="songItem">
+          <img src="card4img.jpeg" alt="cover">
+          <span>Song 2</span>
+          <button onclick="playSong(1)">▶</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Music Player Bottom Bar -->
+  <div class="bottom">
+    <div id="currentSong">No song playing</div>
+    <div class="controls">
+      <button onclick="prevSong()">⏮</button>
+      <button id="playPause" onclick="togglePlay()">▶</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+    <input type="range" id="progressBar" value="0" step="1">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
